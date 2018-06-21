@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 
 def first_challenge
   contacts = {
@@ -15,17 +15,50 @@ def first_challenge
     }
   }
 
-  #your code here
-def remove_strawberr(contacts)
-  contacts.each.do |person,contact_details_hash|
-    contact_details_hash.each.do |attribute,data|
+  contacts["Freddy Mercury"].each do |attribute, value|
       if attribute == :favorite_icecream_flavors
-        data.delete_if{|ice_cream|ice_cream ="strawberry"}
+        value.delete_if do |flavor|
+          flavor == "strawberry"
       end
     end
   end
-end
-
   #remember to return your newly altered contacts hash!
   contacts
 end
+
+
+# def first_challenge
+#   contacts = {
+#     "Jon Snow" => {
+#       name: "Jon",
+#       email: "jon_snow@thewall.we",
+#       favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
+#       knows: nil
+#     },
+#     "Freddy Mercury" => {
+#       name: "Freddy",
+#       email: "freddy@mercury.com",
+#       favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
+#       {"Freddy Mercury"}[:favorite_icecream_flavors].delete("strawberry")
+#     }
+#   }
+#
+#
+# binding.pry
+
+
+#end
+#   #your code here
+# def remove_strawbery(contacts)
+#   contacts.each do |person,contact_details_hash|
+#     contact_details_hash.each do |attribute,data|
+#       if attribute == :favorite_icecream_flavors
+#         data.delete_if{|ice_cream| ice_cream ="strawberry"}
+#       end
+#     end
+#   end
+# end
+#
+#   #remember to return your newly altered contacts hash!
+#   contacts
+# end
